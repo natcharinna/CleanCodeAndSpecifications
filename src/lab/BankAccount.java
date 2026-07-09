@@ -11,7 +11,12 @@ public class BankAccount {
      * @param amount จำนวนเงินที่ถอน ต้อง > 0
      * @throws IllegalArgumentException ถ้า amount <= 0
      */
-    public void withdraw(int amount) {
+    public void withdraw(int amount) throws IllegalAccessException {
+
+        if(amount<=0)
+        throw new IllegalAccessException("no money");
+        assert amount <= balance;
+        balance -= amount;
         // TODO: amount <= 0  -> throw IllegalArgumentException  (input ภายนอก = exception)
         // TODO: assert amount <= balance                        (เงื่อนไขภายใน = assert)
         // TODO: balance ลดลงเท่ากับ amount
