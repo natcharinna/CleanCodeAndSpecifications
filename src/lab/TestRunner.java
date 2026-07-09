@@ -15,7 +15,7 @@ public class TestRunner {
         else    { fail++; System.out.println("  [FAIL] " + name); }
     }
 
-    public static void main(String[] a) {
+    public static void main(String[] a) throws IllegalAccessException {
         boolean ea = false;
         assert ea = true;
         if (!ea) System.out.println("!! Assertions are OFF: run with -ea, otherwise Q3 is not fully checked\n");
